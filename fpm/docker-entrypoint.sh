@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-if [ -z "MYSQLBSI" ]; then
+if [ -z "$MYSQLBSI" ]; then
     eval echo BSI_${MYSQLBSI}_HOST:\$BSI_${MYSQLBSI}_HOST
     eval WORDPRESS_DB_HOST=\$BSI_${MYSQLBSI}_HOST
     
