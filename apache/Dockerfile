@@ -1,4 +1,4 @@
-FROM php:5.6-apache
+FROM library/php:5.6-apache
 
 RUN a2enmod rewrite expires
 
