@@ -3,7 +3,7 @@
 ##  部署wordpress镜像  
 为了能够让wordpress自动适配后端服务提供的环境变量，我们对dockerhub官方wordpress镜像进行了微调，先来部署wordpress
   ```
-  oc new-app https://github.com/datafoundry/wordpress.git --context-dir=apache
+  oc new-app https://github.com/datafoundry/wordpress.git
 --> Found Docker image 10e778c (12 days old) from Docker Hub for "library/php:5.6-apache"
     * An image stream will be created as "php:5.6-apache" that will track the source image
     * A Docker build using source code from https://github.com/datafoundry/wordpress.git will be created
