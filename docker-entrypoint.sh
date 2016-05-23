@@ -1,6 +1,18 @@
 #!/bin/bash
 set -e
 
+if [ -z "MYSQLBSI"]; then
+    eval WORDPRESS_DB_HOST=\$BSI_${MYSQLBSI}_HOST
+    eval WORDPRESS_DB_USER=\$BSI_${MYSQLBSI}_USERNAME  
+    eval WORDPRESS_DB_PASSWORD=\$BSI_${MYSQLBSI}_PASSWORD 
+    eval WORDPRESS_DB_NAME=\$BSI_${MYSQLBSI}_NAME 
+fi
+
+echo "WORDPRESS_DB_HOST":${WORDPRESS_DB_HOST}
+echo "WORDPRESS_DB_USER":${WORDPRESS_DB_USER}
+echo "WORDPRESS_DB_PASSWORD":${WORDPRESS_DB_PASSWORD}
+echo "WORDPRESS_DB_NAME":${WORDPRESS_DB_NAME}
+
 if [[ "$1" == apache2* ]] || [ "$1" == php-fpm ]; then
 	: "${WORDPRESS_DB_HOST:=mysql}"
 	# if we're linked to MySQL and thus have credentials already, let's use them
