@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-if [ -z "MYSQLBSI"]; then
+if [ ${MYSQLBSI} ]; then
     eval WORDPRESS_DB_HOST=\$BSI_${MYSQLBSI}_HOST
     eval WORDPRESS_DB_USER=\$BSI_${MYSQLBSI}_USERNAME  
     eval WORDPRESS_DB_PASSWORD=\$BSI_${MYSQLBSI}_PASSWORD 
