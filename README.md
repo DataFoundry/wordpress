@@ -130,7 +130,7 @@ Events:
   　　以上服务实例创建完成，我们继续把mysql backingservice绑定到workdpress应用中
   ```
    oc bind mysql-inst1 wordpress
-   oc env dc/wordpress MYSQLBSI=MYSQLINST1 BSITYPE=MYSQL
+   oc env dc/wordpress MYSQLBSI=MYSQLINST1 BSITYPE=MYSQL_
   ```  
   　　查看部署结果,POD已正常启动，给wordpress生成一个route地址后就可以访问了
   ```
