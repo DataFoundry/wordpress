@@ -1,4 +1,4 @@
-#  内容简介
+#  WordPress内容简介
 本案例演示了如何通过datafoundry平台提供的mysql后端服务来部署wordpress应用，部署流程如下：  
 ##  部署wordpress镜像  
 为了能够让wordpress自动适配后端服务提供的环境变量，我们对dockerhub官方wordpress镜像进行了微调，先来部署wordpress
