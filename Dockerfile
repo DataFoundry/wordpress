@@ -27,7 +27,7 @@ ENV WORDPRESS_VERSION 4.5.3
 ENV WORDPRESS_SHA1 bab94003a5d2285f6ae76407e7b1bbb75382c36e
 
 # upstream tarballs include ./wordpress/ so this gives us /usr/src/wordpress
-RUN curl -o wordpress.tar.gz -SL https://wordpress.org/wordpress-${WORDPRESS_VERSION}.tar.gz \
+RUN curl -o wordpress.tar.gz -SL https://s3.cn-north-1.amazonaws.com.cn/datafoundry/base_software/wordpress-4.5.3.tar.gz \
 	&& echo "$WORDPRESS_SHA1 *wordpress.tar.gz" | sha1sum -c - \
 	&& tar -xzf wordpress.tar.gz -C /usr/src/ \
 	&& rm wordpress.tar.gz \
