@@ -23,7 +23,7 @@ RUN { \
 
 VOLUME /var/www/html
 
-ENV WORDPRESS_VERSION 4.5.2
+ENV WORDPRESS_VERSION 4.5.3
 ENV WORDPRESS_SHA1 bab94003a5d2285f6ae76407e7b1bbb75382c36e
 
 # upstream tarballs include ./wordpress/ so this gives us /usr/src/wordpress
