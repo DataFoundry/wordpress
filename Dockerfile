@@ -1,4 +1,4 @@
-FROM library/php:5.6-apache
+FROM registry.dataos.io/library/php:5.6-apache
 
 RUN sed -i "s/http:\/\/httpredir.debian.org/http:\/\/mirrors.aliyun.com/g" /etc/apt/sources.list && \
     sed -i "s/http:\/\/security.debian.org/http:\/\/mirrors.aliyun.com\/debian-security/g" /etc/apt/sources.list
